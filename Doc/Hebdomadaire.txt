@@ -1,0 +1,12 @@
+Semaine 1 : 
+
+Récapitulatif : 
+Créer un chat interactif multijoueur, ou il est possible de se déplacer dans un monde ouvert avec son “personnage” et également communiqué avec les autres par écrit et d’effectuer quelques actions.
+Requis: React, NodeJS, WebSocket
+
+Déroulement:
+Pour le nouveau projet, j'ai choisi de faire un jeu multijoueur. Cette semaine, je vais commencer par voir comment faire un login avec la méthode MERN qui s'implemente bien à mon projet.
+J'essayerai de faire également le début de l'interface du jeu en React.
+D'ici la fin de la semaine 1, je devrai avoir un login fonctionnel, ainsi qu'un début d'interface.
+
+
