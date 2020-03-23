@@ -1,0 +1,34 @@
+Récapitulatif : 
+
+Créer un chat interactif multijoueur, ou il est possible de se déplacer dans un monde ouvert avec son “personnage” et également communiqué avec les autres par écrit et d’effectuer quelques actions.
+Requis: React, NodeJS, WebSocket
+
+Première semaine (2 mars 2020 au 8 mars 2020):
+
+J'ai commencé par faire un formulaire d'inscription. Il y avait quelques erreurs au niveau du code.
+Je n'arrivais pas à envoyer les données à la base de données.
+En parralèle, je faisais des recherches sur la méthode MERN pour mon formulaire d'inscription.
+Je pense essayer cette méthode qui utilise Mongoose- Expres React et Node Js.
+
+Deuxième semaine (9 mars 2020 au 15 mars 2020):
+
+Après avoir mené mes recherches sur la méthode MERN, j'ai commencé à faire denouveau mon formulaire.
+Pour commencer, j'ai eu des soucis au niveau de la création du porjet. Max m'a aidé à remttre le dossier module
+côté client.
+J'ai réussi à faire le formulaire d'inscription. Pour l'envoie des données, j'ai utilisé la Axios. J'ai eu des
+petites erreurs de synthaxes qui ont pu être corrigées assez rapidement.
+Ensuite, j'ai utilisé le même code pour la connexion avec quelques légères différences.
+Max m'a dit d'incorporer state provider pour pouvoir changer le menu d'incription au menu de personner logguer.
+
+Troisième semaine (16 mars 2020 au 22 mars 2020):
+
+J'ai commencé à faire un chat. Le chat utilisera socket. Il faudra inscrire son nom et écrire le groupe qu'on veut rejoindre.
+Cela permet de garder son identité secret par rapport à son identifiant, et créer sa propre chambre de discussion. J'ai
+quelques erreurs mais de synthaxes à corriger.¨
+
+Quatrième semaine (23 mars 2020 au 29 mars 2020):
+
+L'objectif de cette semaine est de mettre en place le chat avec le projet. Le canvas de la map sur le jeu doit être incorporé. 
+Je dois faire des recherches pour pouvoir faire déplacer le joueur ainsi que tirer.
+
+Cinquième semaine (30 mars 2020 au 4 avril 2020):
