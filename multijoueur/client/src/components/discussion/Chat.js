@@ -17,7 +17,7 @@ const Chat = ({ location }) => {
 
     const [room, setRoom] = useState('');
 
-    const [utilisateurs, setUsers] = useState('');
+    const [utilisateursChat, setUsers] = useState('');
 
     const [message, setMessage] = useState('');
 
@@ -46,8 +46,8 @@ const Chat = ({ location }) => {
             setMessages([...messages, message ]);
         });
 
-        socket.on('roomData', ({ utilisateurs }) => {
-            setUsers(utilisateurs);
+        socket.on('roomData', ({ utilisateursChat }) => {
+            setUsers(utilisateursChat);
         })
 
         return () => {
@@ -67,12 +67,12 @@ const Chat = ({ location }) => {
 
     return (
         <div className="outerContainer">
-            <div className="container">
+            <div className="container-chat">
                 <InfoBar room={room} />
                 <Messages messages={messages} name={name} />
                 <Input message={message} setMessage={setMessage} sendMessage={sendMessage} />
             </div>
-            <TextContainer users={utilisateurs}/>
+            <TextContainer users={utilisateursChat}/>
         </div>
     );
 };

@@ -25,7 +25,7 @@ io.on('connect', (socket) => {
         socket.emit('message', { utilisateur: 'admin', text: `${utilisateur.name}, Welcome in :  ${utilisateur.room}.`});
         socket.broadcast.to(utilisateur.room).emit('message', { utilisateur: 'admin', text: `${utilisateur.name} is in the room.` });
 
-        io.to(utilisateur.room).emit('roomData', { room: utilisateur.room, utilisateurs: getUtilisateursInRoom(utilisateur.room) });
+        io.to(utilisateur.room).emit('roomData', { room: utilisateur.room, utilisateursChat: getUtilisateursInRoom(utilisateur.room) });
 
         callback();
     });
@@ -43,7 +43,7 @@ io.on('connect', (socket) => {
 
         if(utilisateur) {
             io.to(utilisateur.room).emit('message', { utilisateur: 'Admin', text: `${utilisateur.name} left the room..` });
-            io.to(utilisateur.room).emit('roomData', { room: utilisateur.room, utilisateurs: getUtilisateursInRoom(user.room)});
+            io.to(utilisateur.room).emit('roomData', { room: utilisateur.room, utilisateursChat: getUtilisateursInRoom(utilisateur.room)});
         }
     })
 });

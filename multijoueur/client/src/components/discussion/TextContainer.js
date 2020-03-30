@@ -4,15 +4,15 @@ import onlineIcon from './icons/onlineIcon.png';
 
 import './style/TextContainer.css';
 
-const TextContainer = ({ utilisateurs }) => (
+const TextContainer = ({ utilisateursChat }) => (
     <div className="textContainer">
         {
-            utilisateurs
+            utilisateursChat
                 ? (
                     <div>
                         <div className="activeContainer">
                             <h2>
-                                {utilisateurs.map(({name}) => (
+                                {utilisateursChat.map(({name}) => (
                                     <div key={name} className="activeItem">
                                         {name}
                                         <img alt="Online Icon" src={onlineIcon}/>
