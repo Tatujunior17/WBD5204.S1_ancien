@@ -1,7 +1,12 @@
+//Importation des librairies
+
 import React, {Component} from 'react'
 import axios from "axios";
 
+
 class Inscription extends Component {
+
+    //Utilisateur email mpd et erreur
 
     state = {
         username: "",
@@ -10,11 +15,16 @@ class Inscription extends Component {
         errors: {}
     };
 
+    //changement des valeurs
+
     handleChange = e => {
         this.setState({
             [e.target.name]: e.target.value
         });
     };
+
+    //Prise des nouvelles valeurs renter
+    //renvoie par axios
 
     handleSubmit = e => {
         e.preventDefault();
@@ -36,6 +46,8 @@ class Inscription extends Component {
     render() {
 
         const {username, email, password, errors } = this.state;
+
+        //Creation du container des champs Inscription
 
         return(
             <React.Fragment>

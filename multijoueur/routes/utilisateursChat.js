@@ -1,4 +1,10 @@
+//Creation tableau
+
 const utilisateursChat = [];
+
+//Attribut (identifiant, nom et chambre) pour l'utilisateur chat
+//Tout les champs sont mis en minuscules
+//Test si les champs sont bien remplies sinon msg erreur
 
 const ajoutUtilisateur = ({ id, name, room }) => {
     name = name.trim().toLowerCase();
@@ -22,8 +28,13 @@ const quitteUtilisateur = (id) => {
     if(index !== -1) return utilisateursChat.splice(index, 1)[0];
 }
 
+//Recuperation de Utilisateur
+
 const getUtilisateur = (id) => utilisateursChat.find((utilisateur) => utilisateur.id === id);
 
+//Recuperation de Utilisateur dans une chambre
+
 const getUtilisateursInRoom = (room) => utilisateursChat.filter((utilisateur) => utilisateur.room === room);
+
 
 module.exports = { ajoutUtilisateur, quitteUtilisateur, getUtilisateur, getUtilisateursInRoom };

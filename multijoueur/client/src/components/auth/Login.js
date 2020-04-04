@@ -1,7 +1,11 @@
+//Importation des librairies
+
 import React, {Component} from 'react'
 import axios from "axios";
 
 class Login extends Component {
+
+    //Utilisateur email mpd et erreur
 
     state = {
         email: "",
@@ -9,11 +13,16 @@ class Login extends Component {
         errors: {}
     };
 
+    //changement des valeurs
+
     handleChange = e => {
         this.setState({
             [e.target.name]: e.target.value
         });
     };
+
+    //Prise des nouvelles valeurs renter
+    //renvoie par axios
 
     handleSubmit = e => {
         e.preventDefault();
@@ -32,6 +41,8 @@ class Login extends Component {
     };
 
     render() {
+
+        //Creation du container des champs Login
 
         const {email, password, errors } = this.state;
 

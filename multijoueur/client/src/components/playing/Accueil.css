@@ -1,0 +1,17 @@
+/* Style pour le corps*/
+
+body {
+    margin: 0;
+    padding: 32px;
+
+}
+
+/* Couleur et style pour la map*/
+body .map {
+    position: relative;
+    padding: 20px;
+    margin: 0 auto;
+    border: 5px solid grey;
+    box-sizing: content-box;
+    background-color: grey;
+}

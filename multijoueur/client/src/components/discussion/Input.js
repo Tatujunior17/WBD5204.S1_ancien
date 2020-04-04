@@ -1,6 +1,11 @@
+//Importation de la librairie
+//Importation du style
+
 import React from 'react';
 
 import './style/Input.css';
+
+//Creation du champs du message
 
 const Input = ({ setMessage, sendMessage, message }) => (
     <form className="form">

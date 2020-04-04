@@ -1,3 +1,6 @@
+//Imporation librairies
+//Importation du style
+
 import React from 'react';
 
 import './Message.css';
@@ -5,19 +8,21 @@ import './Message.css';
 import ReactEmoji from 'react-emoji';
 
 const Message = ({ message: { text, utilisateur }, name }) => {
-    let isSentByCurrentUser = false;
+    let utilisateurActuel = false;
 
-    const trimmedName = name.trim().toLowerCase();
+    //Enlver les espacement avec Trim()
 
-    if(utilisateur === trimmedName) {
-        isSentByCurrentUser = true;
+    const espaceNom = name.trim().toLowerCase();
+
+    if(utilisateur === espaceNom) {
+        utilisateurActuel = true;
     }
 
     return (
-        isSentByCurrentUser
+        utilisateurActuel
             ? (
                 <div className="messageContainer justifyEnd">
-                    <p className="sentText pr-10">{trimmedName}</p>
+                    <p className="sentText pr-10">{espaceNom}</p>
                     <div className="messageBox backgroundBlue">
                         <p className="messageText colorWhite">{ReactEmoji.emojify(text)}</p>
                     </div>

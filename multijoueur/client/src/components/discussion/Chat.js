@@ -1,3 +1,7 @@
+//Importation des librairies
+//Importation des Constructeurs
+//Importation du style
+
 import React, { useState, useEffect } from "react";
 import queryString from 'query-string';
 import io from "socket.io-client";
@@ -9,7 +13,11 @@ import InfoBar from './InfoBar';
 
 import './style/Chat.css';
 
+//Variable Global
+
 let socket;
+
+//Creation de constantes
 
 const Chat = ({ location }) => {
 
@@ -31,8 +39,13 @@ const Chat = ({ location }) => {
 
         socket = io(ENDPOINT);
 
+        //Chambre et Utilisateur recuperer
+
         setRoom(room);
         setName(name);
+
+
+        //Connection
 
         socket.emit('join', { name, room }, (error) => {
             if(error) {
@@ -40,6 +53,8 @@ const Chat = ({ location }) => {
             }
         });
     }, [ENDPOINT, location.search]);
+
+    //Loesque utilisateur ecri un message
 
     useEffect(() => {
         socket.on('message', (message) => {
@@ -64,6 +79,8 @@ const Chat = ({ location }) => {
             socket.emit('sendMessage', message, () => setMessage(''));
         }
     };
+
+    //Container Principal regroupant les autres composents créés
 
     return (
         <div className="outerContainer">

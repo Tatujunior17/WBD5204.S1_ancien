@@ -1,3 +1,6 @@
+//Importation des librairies
+//Importation du style
+
 import React, { useState } from 'react';
 import { Link } from "react-router-dom";
 import './style/Join.css';
@@ -5,6 +8,9 @@ import './style/Join.css';
 export default function SignIn() {
     const [name, setName] = useState('');
     const [room, setRoom] = useState('');
+
+    //Creation du des champs de connexion
+
 
     return (
         <div className="joinOuterContainer">

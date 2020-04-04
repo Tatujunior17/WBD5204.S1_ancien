@@ -1,4 +1,4 @@
-//Import
+// creation des constantes
 
 const express = require("express");
 const mongoose = require("mongoose");

@@ -1,4 +1,4 @@
-//Import
+//Creations des constantes
 
 const express = require("express");
 const mongoose = require("mongoose");
@@ -9,6 +9,7 @@ const jwt_decode = require("jwt-decode");
 const keys = require("../config/keys");
 
 
+//Prise des constantes selon le modele appartenant a Utilisateur
 
 const {Utilisateurs, regValidation, loginValidation } = require('../models/Utilisateurs');
 
@@ -80,6 +81,8 @@ router.post('/inscription', (req, res) => {
     });
 });
 
+//Envoie page login
+
 router.post('/login',(req,res)=>{
     const {error} = loginValidation(req.body);
     if(error) {
@@ -99,6 +102,7 @@ router.post('/login',(req,res)=>{
                 msg: "Email non enregister."
             });
         }
+        //comparaison du mpd crypte
         bcrypt.compare(req.body.password, utilisateur.password).then(isMatch =>{
             if(isMatch){
                 const payload ={
@@ -128,7 +132,6 @@ router.post('/login',(req,res)=>{
         });
     });
 });
-
 
 //Export
 

@@ -1,7 +1,11 @@
+//Importation des librairies et des composants
+
 import React from 'react'
 import {Link, NavLink} from "react-router-dom";
 
 let token = localStorage.getItem('token');
+
+//Changement de menu lorsque utilisateur est connecte ou non
 
 const Header = () =>{
 
@@ -21,10 +25,12 @@ const Header = () =>{
     const afficherRegisterouchat = () => {
         let registerouchat = <NavLink to="/inscription" style={{color: "white"}}>Register</NavLink>;
         if(token){
-            registerouchat = <Link className="nav-link" to='/chat'>Chat</Link>;
+            registerouchat = <Link className="nav-link" to='/join'>Chat</Link>;
         }
         return registerouchat;
     };
+
+    // Creation du menu avec les differents liens
 
     return (
         <header>
@@ -39,6 +45,9 @@ const Header = () =>{
                     </li>
                     <li className="nav-item">
                         {afficherLogin()}
+                    </li>
+                    <li className="nav-item">
+                        <NavLink to="/join" style={{color: "white"}}>Chat</NavLink>;
                     </li>
                 </ul>
                 </div>
